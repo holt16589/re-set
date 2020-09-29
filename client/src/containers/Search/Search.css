@@ -1,0 +1,41 @@
+.search-section {
+   margin-top: 30vh;
+   text-align: center;
+   height: 55vh;
+}
+
+.searchBar{
+   font-family: inherit;
+   font-size: 1.5em;
+   border: 0;
+   color: white;
+   border-bottom: 4px solid white;
+   background: #FFABAB;
+   width: 40%;
+   caret-color: white;
+}
+
+.searchBar:focus {
+   outline-width: 0;
+}
+
+.searchBar::placeholder{
+   color: white;
+}
+
+.search-arrow{
+   color: white;
+   font-size: 1.8em;
+}
+
+.searchBtn{
+   border: none;
+   background-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+   .searchBar{
+      font-size: 1.2em;
+      width: 80%;
+ }
+}

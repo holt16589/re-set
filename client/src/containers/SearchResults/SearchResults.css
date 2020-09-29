@@ -1,0 +1,41 @@
+.results-section {
+    margin-top: 10vh;
+    text-align: center;
+ }
+
+ .roundedImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+ }
+
+ .resultBody{
+     color: white;
+ }
+
+ .resultBody:hover{
+     cursor: pointer;
+ }
+
+ .resultBody:hover > .roundedImg{
+    border: 3px solid white;
+}
+.resultBody:hover > h3 {
+   text-decoration: underline;
+}
+
+ .resultsTitle{
+     color: white;
+     border-bottom: 2px solid white;
+ }
+
+ .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }

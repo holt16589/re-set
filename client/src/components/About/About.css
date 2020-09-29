@@ -1,0 +1,25 @@
+.about-section{
+    margin-top: 20vh;
+    width: 50vw;
+    height: 65vh;
+    color: white;
+}
+
+.about-section p{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.about-button{
+    color: white;
+    background: none;
+    border: 3px solid white;
+}
+
+.about-button:hover{
+    color: #FFABAB;
+    background: white;
+    font-weight: 700;
+    transition: 0.7s;
+    border: none;
+}

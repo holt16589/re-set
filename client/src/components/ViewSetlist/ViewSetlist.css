@@ -1,0 +1,102 @@
+.setContainer{
+    border: 3px solid white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 10vh;
+    margin-bottom: 5em;
+    color: #FFABAB;
+    background: #F4F4F4;
+}
+
+.setTitle{
+    justify-content:center;
+    text-align: center;
+    margin-bottom: 2em;
+    color: #FFABAB;
+}
+
+.set-overview{
+    text-align: center;
+}
+
+.set-details{
+    font-size: 1.3em;
+    
+}
+
+.songList{
+    list-style: none;
+    
+}
+
+.trackLi{
+    font-weight: 700;
+}
+
+.subHead{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.notAvailable{
+    color: lightgrey;
+}
+
+.displayImg{
+    max-height: 300px;
+    margin-bottom: 1em;
+}
+
+.setButton{
+    display: inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #C98986;
+    background: #C98986;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:500;
+    color: white;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.setButton:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.faIcon{
+    margin-right: 0.5em;
+}
+
+@media (max-width: 850px) {
+    .setContainer{
+       width: 80%;
+       margin: 0 auto;
+       padding: 10px;
+  }
+
+
+.setTitle{
+    margin-bottom: 1em;
+}
+
+  .setContainer img {
+    max-width: 60vw;
+  }
+
+  .set-overview{
+      padding-bottom: 1em;
+  }
+
+  .set-details{
+    font-size: 1em;
+  }
+
+  .trackLi{
+      font-weight: 600;
+  }
+
+ }

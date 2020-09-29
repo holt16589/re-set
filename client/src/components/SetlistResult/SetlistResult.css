@@ -1,0 +1,86 @@
+.setlistResult{
+    border: 4px solid white;
+    background:white;
+    color:#FFABAB;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 15px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+.emptySet{
+    opacity: 0.6;
+}
+
+.emptySet:hover{
+    opacity: 60% !important;
+    cursor: auto !important;
+}
+
+
+.setlistResult:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.artistName{
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.venue{
+    font-style: italic;
+}
+
+.dateBlock{
+    border: 4px solid #FFABAB;
+    background:#FFABAB;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 75%;
+    min-width: 80px;
+}
+
+.dateBlock span{
+    display: block;
+    text-align: center;
+}
+
+.month, .year{
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.day{
+    font-size: 30px;
+    line-height: 100%;
+}
+
+.numSongs{
+    font-weight: 700;
+}
+
+.setRow {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .setRow{
+       width: 80%;
+       margin: 0 auto;
+  }
+
+ .arrowIcon{
+    display: none;
+ }
+ }

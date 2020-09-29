@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navigationBar{
+    margin-left: 3em;
+}
+
+.logo-text{
+    font-family: Pacifico;
+    font-size: 2em;
+    color: white;
+}
+
+.logo-text:hover{
+    transition: 0.3s;
+}
+
+.items{
+    margin-left: auto;
+}
+.nav-item{
+    margin-right: 1.5em;
+}
+
+.nav-hover{
+    color: white;   
+}
+
+.nav-hover:hover {
+    font-weight: 700;
+    border-bottom: 3px solid white;
+    }
+
+#displayName-btn {
+    margin-right: 1.5em;
+}
+
+.spotify-login{
+    color: white;
+    border: 3px solid white;
+}
+
+.spotify-login:hover{
+    color: #FFABAB;
+    background: white;
+    font-weight: 700;
+    transition: 0.7s;
+}
+
+.nav-item a{
+    text-decoration: none;
+}
+
+#results-title{
+    color: white;
+    border-bottom: 3px solid white;
+}
