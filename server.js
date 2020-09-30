@@ -1,5 +1,6 @@
 /**
  * Spotify server functions cloned from https://github.com/spotify/web-api-auth-examples
+ * Additional custom code to handle other server requests.
  */
 
 var express = require('express'); // Express web server framework

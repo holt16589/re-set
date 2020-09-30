@@ -118,7 +118,7 @@ saveSetlistHandler = () => {
       if(this.state.setObject){
         
         if(this.state.fmTracks && this.state.spotify){
-          //search for album art from track list to display
+          //search each track from the setlist and identify the first track with an available album art image to display
           setSize = this.state.fmTracks.length;
           for(let i = 0; i < this.state.spotify.length; i++){
             if(this.state.spotify[i].tracks.items.length > 0 ){
@@ -129,6 +129,7 @@ saveSetlistHandler = () => {
           }
           }
           if(imageUrl){
+            //if album art is available from setlist tracks
            displayImage= <img className = "displayImg" src={imageUrl} alt={this.state.setObject.artist.name}/>;
           }
           else{

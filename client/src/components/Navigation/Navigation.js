@@ -8,6 +8,8 @@ import 'components/Navigation/Navigation.css';
 
 const navigation = ( props ) => {
   const { location } = props;
+
+  //hide the navigation component on the login route
   if (location.pathname.match(/login/)){
     return null;
   }
@@ -21,7 +23,7 @@ const navigation = ( props ) => {
         topArtists = <Nav.Item className="nav-item"><NavLink to="/topartists" ><span className="nav-hover">Your Top Artists</span></NavLink></Nav.Item>;
     }
     else{
-      
+        //if user is not logged in, show "Login" button
         loginButton = 
         <Link to="/login"><Button className="spotify-login" variant="nav">Login to Spotify</Button>
         </Link>;

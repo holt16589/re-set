@@ -6,7 +6,6 @@ export function getHashParams() {
     var hashParams = {};
     var e, r = /([^&;=]+)=?([^&;]*)/g,
         q = window.location.hash.substring(1);
-    //eslint-disable-next-line
     while ( e = r.exec(q)) {
        hashParams[e[1]] = decodeURIComponent(e[2]);
     }
@@ -49,6 +48,7 @@ export async function addPlaylistTracks(playlistID, trackList){
     return response;
 }
 
+//retrieve the current users top 50 artists in the medium term
 export async function getTopArtists(){
     const response = await spotifyWebApi.getMyTopArtists({ limit: 50 });
     return response;

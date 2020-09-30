@@ -71,6 +71,7 @@ const setlistResult = (props) => {
 
         let isEmpty = props.setSize === 0;
         if(isEmpty){
+            //reduce opacity for any empty sets and prevent user from clicking
             styleClass = "setlistResult emptySet";
         }
 

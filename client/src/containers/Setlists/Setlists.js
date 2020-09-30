@@ -18,6 +18,7 @@ class Setlists extends Component {
         }} 
 
         componentDidMount() {  
+            //take user query from search and make server request to get matching setlists
             let artist = this.props.location.state.artistName;
             if(artist){
                 this.setState({artistName: artist});

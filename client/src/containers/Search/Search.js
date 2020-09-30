@@ -15,6 +15,7 @@ class Search extends Component {
         }} 
         
         componentDidMount(){
+                //check if the user is logged in. if not, redirect to login screen
                 if(!this.props.loggedIn){
                         this.props.history.push('/login');
                 }

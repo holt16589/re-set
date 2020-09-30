@@ -15,6 +15,7 @@ class Login extends Component {
     }
 
     loginClickHandler = () => {
+        //when login button clicked, send request to server and redirect to spotify authorization
         this.setState({loading:true});
         fetch('/api/login/')
         .then( (response) => {
