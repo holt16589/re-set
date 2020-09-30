@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, Navbar, Button, DropdownButton, Dropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import 'components/Navigation/Navigation.css';
@@ -21,7 +21,10 @@ const navigation = ( props ) => {
         topArtists = <Nav.Item className="nav-item"><NavLink to="/topartists" ><span className="nav-hover">Your Top Artists</span></NavLink></Nav.Item>;
     }
     else{
-        loginButton = <Button className="spotify-login" href="http://localhost:3000" variant="nav">Login to Spotify</Button>
+      
+        loginButton = 
+        <Link to="/login"><Button className="spotify-login" variant="nav">Login to Spotify</Button>
+        </Link>;
     }
 
         return(
