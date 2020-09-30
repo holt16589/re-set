@@ -16,7 +16,7 @@ const navigation = ( props ) => {
     let topArtists = null;
     if(props.loggedIn){
         loginButton = <DropdownButton alignRight variant="secondary" id="displayName-btn" title={props.displayName}>
-        <Dropdown.Item href="http://localhost:8888/">Sign out</Dropdown.Item>
+        <Dropdown.Item href="https://re-set.herokuapp.com/">Sign out</Dropdown.Item>
         </DropdownButton>;
         topArtists = <Nav.Item className="nav-item"><NavLink to="/topartists" ><span className="nav-hover">Your Top Artists</span></NavLink></Nav.Item>;
     }
