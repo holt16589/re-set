@@ -14,8 +14,13 @@ var port = process.env.PORT || 8888;
 
 var client_id = process.env.SPOTIFY_CLIENT; // Your client id
 var client_secret = process.env.SPOTIFY_SECRET; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
-
+var redirect_uri = '';
+if(process.env.NODE_ENV === 'production'){
+redirect_uri='https://re-set.herokuapp.com/api/callback';
+}
+else{
+  redirect_uri = 'http://localhost:8888/api/callback';
+}
 
 var setlistfmClient = new setlistfm({
 	key: process.env.SETLIST_KEY,
@@ -80,7 +85,7 @@ let redirect = 'https://accounts.spotify.com/authorize?' +
   });
   });
 
-app.get('/callback', function(req, res) {
+app.get('/api/callback', function(req, res) {
 
   // your application requests refresh and access tokens
   // after checking the state parameter
@@ -127,11 +132,21 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('http://localhost:3000/#' +
+        if(process.env.NODE_ENV === 'production'){
+          res.redirect('https://re-set.herokuapp.com/#' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
           }));
+          }
+          else{
+            res.redirect('http://localhost:3000/#' +
+            querystring.stringify({
+              access_token: access_token,
+              refresh_token: refresh_token
+            }));
+          }
+       
       } else {
         res.redirect('/#' +
           querystring.stringify({
