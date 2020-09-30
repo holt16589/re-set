@@ -133,7 +133,7 @@ app.get('/api/callback', function(req, res) {
 
         // we can also pass the token to the browser to make requests from there
         if(process.env.NODE_ENV === 'production'){
-          res.redirect('http://re-set.herokuapp.com/#' +
+          res.redirect('https://re-set.herokuapp.com/#' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
