@@ -14,11 +14,11 @@ class Search extends Component {
                 searchValue: ''
         }} 
         
-        componentDidMount(){
-                if(!this.props.loggedIn){
-                        this.props.history.push('/login');
-                }
-        }
+        // componentDidMount(){
+        //         if(!this.props.loggedIn){
+        //                 this.props.history.push('/login');
+        //         }
+        // }
 
         searchValueHandler = ( event ) => {
                 //display arrow icon when the user has typed at least one character
