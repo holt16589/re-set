@@ -17,6 +17,7 @@
 
 .searchBar:focus {
    outline-width: 0;
+   outline: none;
 }
 
 .searchBar::placeholder{
