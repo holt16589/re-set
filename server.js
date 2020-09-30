@@ -10,7 +10,7 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 require('dotenv').config({path:__dirname+'/.env'})
 var setlistfm = require('setlistfm-js');
-var PORT = process.env.PORT || 8888;
+var port = process.env.PORT || 8888;
 
 var client_id = process.env.SPOTIFY_CLIENT; // Your client id
 var client_secret = process.env.SPOTIFY_SECRET; // Your secret
@@ -42,26 +42,43 @@ var stateKey = 'spotify_auth_state';
 
 var app = express();
 
-app.use(express.static(__dirname + '/public'))
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+
+}
+else{
+  app.use(express.static(__dirname + '/public'))
   .use(cors())
   .use(cookieParser());
+}
 
-app.get('/login', function(req, res) {
 
+app.get('/api/login', function(req, res) {  
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
   // your application requests authorization
   var scope = 'user-read-private user-read-email user-read-playback-state playlist-modify-public user-top-read';
-  res.redirect('https://accounts.spotify.com/authorize?' +
-    querystring.stringify({
-      response_type: 'code',
-      client_id: client_id,
-      scope: scope,
-      redirect_uri: redirect_uri,
-      state: state
-    }));
-});
+  // res.redirect('https://accounts.spotify.com/authorize?' +
+  //   querystring.stringify({
+  //     response_type: 'code',
+  //     client_id: client_id,
+  //     scope: scope,
+  //     redirect_uri: redirect_uri,
+  //     state: state
+  //   }));
+let redirect = 'https://accounts.spotify.com/authorize?' +
+  querystring.stringify({
+    response_type: 'code',
+    client_id: client_id,
+    scope: scope,
+    redirect_uri: redirect_uri,
+    state: state
+  });
+  res.send({
+    redirect: redirect
+  });
+  });
 
 app.get('/callback', function(req, res) {
 
@@ -172,4 +189,4 @@ app.get('/api/getSetlist/:setid', function(req, res) {
     }))
 });
 
-app.listen(PORT, () => console.log('Listening on ${PORT}'));
+app.listen(port, () => console.log(`Listening on ${port}`));

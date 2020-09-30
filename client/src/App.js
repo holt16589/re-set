@@ -9,6 +9,7 @@ import About from 'components/About/About';
 import Setlists from 'containers/Setlists/Setlists';
 import ViewSetlist from 'components/ViewSetlist/ViewSetlist';
 import TopArtists from 'containers/TopArtists/TopArtists';
+import Login from 'components/Login/Login';
 import * as spotifyFunctions from 'spotifyFunctions';
 
 library.add(fab);
@@ -51,6 +52,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={props =>
             (<Search {...props} loggedIn={this.state.loggedIn} />)}/>
+            <Route path="/login" render={Login}/>
              <Route path="/results" component={SearchResults} />
              <Route path="/topartists" component={TopArtists} />
              <Route path="/about" component={About} />

@@ -1,11 +1,17 @@
 import React from 'react';
 import { Nav, Navbar, Button, DropdownButton, Dropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import 'components/Navigation/Navigation.css';
 
 const navigation = ( props ) => {
+  const { location } = props;
+  if (location.pathname.match(/login/)){
+    return null;
+  }
+
     let loginButton = null;
     let topArtists = null;
     if(props.loggedIn){
@@ -15,7 +21,7 @@ const navigation = ( props ) => {
         topArtists = <Nav.Item className="nav-item"><NavLink to="/topartists" ><span className="nav-hover">Your Top Artists</span></NavLink></Nav.Item>;
     }
     else{
-        loginButton = <Button className="spotify-login" href="http://localhost:8888" variant="nav">Login to Spotify</Button>
+        loginButton = <Button className="spotify-login" href="http://localhost:3000" variant="nav">Login to Spotify</Button>
     }
 
         return(
@@ -42,4 +48,4 @@ const navigation = ( props ) => {
         )
 }
 
-export default navigation;
+export default withRouter(navigation);

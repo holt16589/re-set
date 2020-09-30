@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { withRouter } from "react-router";
+import { Redirect, withRouter } from "react-router";
 import Footer from 'components/Layout/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -13,6 +13,12 @@ class Search extends Component {
                 showArrow: false,
                 searchValue: ''
         }} 
+        
+        componentDidMount(){
+                if(!this.props.loggedIn){
+                        this.props.history.push('/login');
+                }
+        }
 
         searchValueHandler = ( event ) => {
                 //display arrow icon when the user has typed at least one character
