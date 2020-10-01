@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-body{
-    font-family: 'Roboto';
-    color: white;
-    background-color: #FFABAB;
-  }
-
   .title{
       font-family: 'Pacifico';
       margin-bottom: 5vh;
@@ -26,6 +20,7 @@ body{
 }
 
 .login-section{
+    margin-top: 10vh;
     text-align: center;
 }
 
