@@ -68,7 +68,7 @@
 }
 
 .setButton:hover{
-    opacity: 80%;
+    /* opacity: 80%; */
     cursor: pointer;
 }
 
