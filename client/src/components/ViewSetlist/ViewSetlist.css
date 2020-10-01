@@ -59,7 +59,6 @@
     font-weight:500;
     color: white;
     text-align:center;
-    transition: all 0.2s;
 }
 
 .setButton:hover{

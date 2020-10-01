@@ -82,7 +82,11 @@ saveSetlistHandler = () => {
     //create array of track URIs for spotify API
     this.state.spotify.forEach(
       (track)=>{
+        console.log(track.tracks.items.length);
+        if(track.tracks.items.length !== 0){
         uriList.push(track.tracks.items[0].uri);
+        }
+        
       }
     );
     
