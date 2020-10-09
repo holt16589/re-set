@@ -42,7 +42,6 @@ class Login extends Component {
 
         return(
                 <React.Fragment>
-<Container className = "about-section" fluid>
         <Row><Col>
         <div className="container login-section">
       <div id="login">
@@ -52,7 +51,6 @@ class Login extends Component {
       </div>
     </div>
         </Col></Row>
-</Container>
 <Footer />
 </React.Fragment>
         )

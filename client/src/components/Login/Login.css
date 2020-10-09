@@ -20,8 +20,9 @@
 }
 
 .login-section{
-    margin-top: 10vh;
+    margin-top: 30vh;
     text-align: center;
+    color: white;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -34,3 +35,8 @@ h2{
     margin-bottom: 1.5em;
 }
 
+@media (max-width: 600px) {
+.login-section{
+    margin-top: 20vh;
+}
+}
